@@ -14,10 +14,14 @@ header{
 .header-logo{
     font-size: 20px;
     display: inline-block;
+    cursor: default;  
+    margin: 0 20px;  
+    position: relative;
+    z-index: 1;
 }
-.header-nav {
+.header-nav-list {
     display: inline-block;
-    margin-left: 40px;
+    margin-left: 40px; 
 }
 .header-nav a {
     padding: 20px;
@@ -26,4 +30,59 @@ header{
 }
 .header-nav a:hover {
     color: #fff;
+    font-size: 120%; /*改变鼠标悬停时字体大小*/
+}
+.header-menu-line{
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    margin: 5px 4px;
+
+}
+.header-menu{
+    display: none;
+}
+.header-nav{
+    display: inline-block;
+}
+@media only screen and (max-width:768px) {
+    .header-menu{
+        display: block;
+        position: fixed;
+        left: 20px;
+        top: 28px;
+        z-index: 1;
+
+    }
+    .header-nav-list{
+        display: none;
+        
+    }
+    header{
+        text-align: center;
+    }
+    .show-menu{
+
+    }
+    .show-menu .header-nav-list{
+        height: 100%;
+        opacity: .95;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: block;
+        margin: 0;
+        width: 100%;
+        background-color: #2f373a;
+        margin-top: 80px;
+        text-align: left;
+        text-indent: 25px;
+        padding-top: 20px;
+    }
+    .show-menu .header-nav a{
+        display: block;
+        padding: 0;
+        height: 50px;
+        line-height: 50px;
+    }
 }
