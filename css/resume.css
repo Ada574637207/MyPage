@@ -57,7 +57,8 @@ h1 {
     line-height: 60px;
 }
 .details-title{
-    
+    width: 100px;
+    display: inline-block;
 }
 .details-more{
 
