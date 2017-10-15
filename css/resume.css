@@ -145,4 +145,8 @@ i{
     .education{
         width: 100%;
     }
+    .show-menu .header-nav-list {
+        background-color: #2c3c51;
+    }
+
 }

@@ -27,11 +27,15 @@ a{
 .header-nav-list {
     display: inline-block;
     margin-left: 40px; 
+    z-index: 1;
+    font-size: 16px;
+    text-decoration: none;
 }
 .header-nav a {
     padding: 20px;
     color: #A9A9A9;
     cursor: pointer;
+    text-decoration: none;
 }
 .header-nav a:hover,
 .header-nav a.active {
@@ -55,7 +59,7 @@ a{
     .header-menu{
         display: block;
         position: absolute;
-        left: 20px;
+        right: 20px;
         top: 28px;
         z-index: 1;
 
@@ -65,10 +69,10 @@ a{
         
     }
     header{
-        text-align: center;
+        text-align: left;
     }
-    .show-menu{
-
+    .header-logo{
+        
     }
     .show-menu .header-nav-list{
         height: 100%;
