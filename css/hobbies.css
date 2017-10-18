@@ -19,9 +19,6 @@ header{
     position: relative;
 
 }
-.main-container{
-
-}
 .main-blue{
     height: 450px;
     background-color: #75cbf0;
@@ -33,19 +30,35 @@ header{
     overflow: hidden;
 }
 .main-white{
-    height: 485px;
+    height: 500px;
     background-color: #fff;
-    
 }
 .white-text{
     max-width: 1200px;
     margin: 0 auto;
+    color:#75cbf0;
+    overflow: hidden;
+    text-align: center;
+}
+.stamps{
+    margin-top: 250px;
+}
+.money{
+    margin-top: 300px;
+}
+.brocades{
+    margin-top: 250px;
+}
+p{
+    display: inline-block;
+    margin: 0 0 0 7px;
 }
 .square-container{
     position: relative;
     max-width: 1550px;
     margin: 0 auto;
-    text-align: center
+    text-align: center;
+    height: 0;
 }
 .square-position{
     position: absolute;
