@@ -199,6 +199,9 @@ p{
     border-width: 12px;
     transform: rotate(-30deg);
 }
+.square-position-xs{
+    display: none;
+}
 
 .main-gray{
     min-height: 400px;
@@ -217,6 +220,101 @@ h1{
 .blue-text img{
    width: 354px;
 }
+.main-blue{
+    height: 300px;
+}
+.main-white{
+    height: 310px;
+}
+.stamps{
+    margin-top: 130px;
+}
+.money{
+    margin-top: 180px;
+}
+.brocades{
+    margin-top: 130px;
+}
+.square-y{
+    text-align: justify;
+}
+.square-position{
+    display: none;
+}
+.square-position-xs{
+    width: 100%;
+    position: absolute;
+    display: inline-block;
+    top: 250px;
+}
+.square-1xs{
+    height: 30px;
+    width: 30px;
+    top: -23px;
+    transform: rotate(35deg);
+}
+.square-2xs{
+    height: 50px;
+    width: 50px;
+    left: 45px;
+    top: -25px;
+    border-width: 7px;
+}
+.square-3xs{
+    height: 70px;
+    width: 70px;
+    left: 87px;
+    top: -85px;
+    transform: rotate(-10deg);
+    border-width: 8px;
+}
+.square-4xs{
+    height: 50px;
+    width: 50px;
+    left: 125px;
+    top: -18px;
+    transform: rotate(20deg);
+}
+.square-5xs{
+    height: 80px;
+    width: 80px;
+    left: 175px;
+    top: -40px;
+    transform: rotate(20deg);
+    border-width: 8px;
+}
+.square-6xs{
+    height: 110px;
+    width: 110px;
+    top: -112px;
+    border-width: 11px;
+    left: 360px;
+}
+.square-7xs{
+    height: 125px;
+    width: 125px;
+    left: 250px;
+    top: -70px;
+    border-width: 12px;
+}
+.square-8xs{
+    left: 520px;
+    height: 160px;
+    width: 160px;
+    top: -50px;
+    transform: rotate(27deg);
+    border-width: 14px;
+}
+.square-9xs{
+    height: 60px;
+    width: 60px;
+    left: 470px;
+    top: -30px;
+    border-width: 8px;
+    transform: rotate(-10deg);
+}
+
+
 
 
 }
