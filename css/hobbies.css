@@ -40,6 +40,9 @@ header{
     overflow: hidden;
     text-align: center;
 }
+.col-xs-4 {
+    padding: 0 8px;
+}
 .stamps{
     margin-top: 250px;
 }
@@ -48,6 +51,9 @@ header{
 }
 .brocades{
     margin-top: 250px;
+}
+h1{
+    display: inline-block;
 }
 p{
     display: inline-block;
@@ -201,4 +207,16 @@ p{
 .gray-text{
     max-width: 1200px;
     margin: 0 auto;
+}
+
+
+@media only screen and (max-width:768px) {
+h1{
+    display: block;
+}
+.blue-text img{
+   width: 354px;
+}
+
+
 }
