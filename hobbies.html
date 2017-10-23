@@ -232,7 +232,7 @@
                         </div>
                     </li>
                 </ul>
-                
+
 
 
 
@@ -248,14 +248,44 @@
     <script src="js/header.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/bootstrap-waterfall.js"></script>
+    <script src="js/pic-data.js"></script>
 
     <script>
         $(function () {
-            $('.waterfall')
-                .data('bootstrap-waterfall-template', $('#waterfall-template').html())
+            var waterfall = $('.waterfall')
+                //.data('bootstrap-waterfall-template', $('#waterfall-template').html())
                 .waterfall();
+            var myHob = $("#myHob").html();
+            for (var i = 0; i < data.length; i++) {
+                var $myHob = $(myHob);
+                $myHob.find('img').attr('src', data[i].smallsrc);
+                $myHob.find('.media-heading').text(data[i].descripe);
+                waterfall.waterfall('addPins', $myHob);
+            }
         })
     </script>
+    <script id="myHob" type="text/template">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <a href="javascript:;">
+                <img src="images/20.jpg" />
+                </a>
+            </li>
+            <li class="list-group-item">
+                <div class="media">
+                    <div class="media-left">
+                        <a href="javascript:;">
+                        <img class="media-object img-rounded" style="width: 30px; height: 30px;" src="images/avatar_30.png" />
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h5 class="media-heading">Liber</h5>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </script>
+    
 
 
 </body>

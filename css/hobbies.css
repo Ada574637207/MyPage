@@ -322,8 +322,15 @@ h1{
     border-width: 8px;
     transform: rotate(-10deg);
 }
+.hobbies{
+    top: 80px;
+}
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 
-
+}
 
 
 }

@@ -120,7 +120,7 @@
 
   Waterfall.prototype.initPins = function () {
     var $elements = this.$element.children().length > 0 ? this.$element.children().remove() : $(this.$element.data('bootstrap-waterfall-template'))
-    this.$pins = self.decorate($elements)
+    this.$pins = this.$pins && this.$pins.length>0 ? this.$pins : self.decorate($elements)
 
     return this
   }
@@ -183,6 +183,13 @@
     $(window).on('scroll.mystist.waterfall' + this.id, _.throttle($.proxy(function () {
       if (self.isWantMore.call(this)) {
         $(window).off('scroll.mystist.waterfall' + this.id)
+
+        if(!this.pinWidth){
+          this
+          .init()
+          .calculateWidth()
+          .calculatePosition()
+        }
         this.sail()
       }
     }, this), 0))
