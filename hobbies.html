@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/hobbies.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="touchTouch/touchTouch.css">
 
 </head>
 
@@ -94,13 +95,13 @@
 
         <div class="main-gray">
             <div class="gray-text">
-                <div class="waterfall"></div>
+                <div class="waterfall" id="thumbs"></div>
             </div>
             <script id="waterfall-template" type="text/template">
                 <ul class="list-group">
                     <li class="list-group-item">
                         <a herf="javascript:;">
-                        <img src=http://oy7wctc5d.bkt.clouddn.com/DSC01000.jpg />
+                        <img src=http://oy7wctc5d.bkt.clouddn.com/DSC01000.jpg/>
                     </a>
                     </li>
                     <li class="list-group-item">
@@ -112,135 +113,7 @@
                         </div>
                     </li>
                 </ul>
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <a herf="javascript:;">
-                        <img src=http://oy7wctc5d.bkt.clouddn.com/DSC01000.jpg />
-                    </a>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="media">
-                            <div class="media-body">
-                                <h5 class="media-heading">第十六届亚洲国际邮票展览纪念封</h5>
-                                <small>正面</small>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <a herf="javascript:;">
-                        <img src=http://oy7wctc5d.bkt.clouddn.com/DSC01000.jpg />
-                    </a>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="media">
-                            <div class="media-body">
-                                <h5 class="media-heading">第十六届亚洲国际邮票展览纪念封</h5>
-                                <small>正面</small>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <a herf="javascript:;">
-                        <img src=http://oy7wctc5d.bkt.clouddn.com/DSC01000.jpg />
-                    </a>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="media">
-                            <div class="media-body">
-                                <h5 class="media-heading">第十六届亚洲国际邮票展览纪念封</h5>
-                                <small>正面</small>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <a herf="javascript:;">
-                        <img src=http://oy7wctc5d.bkt.clouddn.com/DSC01000.jpg />
-                    </a>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="media">
-                            <div class="media-body">
-                                <h5 class="media-heading">第十六届亚洲国际邮票展览纪念封</h5>
-                                <small>正面</small>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <a herf="javascript:;">
-                            <img src=http://oy7wctc5d.bkt.clouddn.com/DSC01000.jpg />
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="media">
-                            <div class="media-body">
-                                <h5 class="media-heading">第十六届亚洲国际邮票展览纪念封</h5>
-                                <small>正面</small>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <a herf="javascript:;">
-                            <img src=http://oy7wctc5d.bkt.clouddn.com/DSC01000.jpg />
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="media">
-                            <div class="media-body">
-                                <h5 class="media-heading">第十六届亚洲国际邮票展览纪念封</h5>
-                                <small>正面</small>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <a herf="javascript:;">
-                                    <img src=http://oy7wctc5d.bkt.clouddn.com/DSC01000.jpg />
-                                </a>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="media">
-                            <div class="media-body">
-                                <h5 class="media-heading">第十六届亚洲国际邮票展览纪念封</h5>
-                                <small>正面</small>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <a herf="javascript:;">
-                                        <img src=http://oy7wctc5d.bkt.clouddn.com/DSC01000.jpg />
-                                    </a>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="media">
-                            <div class="media-body">
-                                <h5 class="media-heading">第十六届亚洲国际邮票展览纪念封</h5>
-                                <small>正面</small>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-
-
-
-
-
             </script>
-
-
-
         </div>
     </div>
 
@@ -258,7 +131,7 @@
             var myHob = $("#myHob").html();
             for (var i = 0; i < data.length; i++) {
                 var $myHob = $(myHob);
-                $myHob.find('img').attr('src', data[i].smallsrc);
+                $myHob.find('img').attr('src', data[i].smallsrc).data('index', i);
                 $myHob.find('.media-heading').text(data[i].descripe);
                 waterfall.waterfall('addPins', $myHob);
             }
@@ -285,8 +158,16 @@
             </li>
         </ul>
     </script>
-    
+    <script src="touchTouch/touchTouch.jquery.js"></script>
 
+    <script>
+        $(function () {
+            $('#thumbs').touchTouch({
+                data: data,
+                img: 'img'
+            });
+        });
+    </script>
 
 </body>
 
