@@ -201,10 +201,21 @@
 			}
 			
 			// Call the load function with the href attribute of the item
-			loadImage(options.data[parseInt(index)].src, function(){
+			loadImage(options.data[index].src, function(){
 				// placeholders.eq(index).html(this);
-				placeholders.append($('<div class="placeholder">').html(this));
+				appendPlaceholder(index);
+				placeholders.find('.placeholder').eq(index).html(this);
 			});
+		}
+
+		function appendPlaceholder(index){
+			var size = placeholders.find('.placeholder').size();
+			if(size < index){
+				var i = index - size + 1;
+				while(i--){
+					placeholders.append('<div class="placeholder">');
+				}
+			}
 		}
 		
 		// Load the image and execute a callback function.
