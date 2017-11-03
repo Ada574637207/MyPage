@@ -121,15 +121,13 @@ i{
 .achievements{
     background-color: #16a286;
     padding: 40px 20px;
-    color: #fff;
+    color: #d7efde;
 }
 .achv-container{
     max-width: 1200px;
     margin: 0 auto;
 }
-.achievements p{
-    color:#333;
-}
+
 .achv-container h1{
     margin: 0 0;
     padding: 15px 0;
@@ -183,6 +181,21 @@ i{
 }
 .web-bootstrap{
     width: 27px;
+}
+footer{
+    background-color: #3c4252;
+}
+.getpdf{
+    height: 80px;
+}
+.footer-container{
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: end;
+}
+.vx{
+    display: inline-block;
+    margin: 4px 20px;
 }
 
 
