@@ -140,3 +140,5 @@
 
 /*pagelimit*/
 #pagelimit{position:absolute; bottom:20px; left:50%; margin-left:-18px; color:#fff; font-size:1.4rem; }
+
+#gallerySlider>div{height:100%;width:100%}
