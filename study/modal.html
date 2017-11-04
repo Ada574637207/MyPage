@@ -1,0 +1,79 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        html,body{
+            height: 100%;
+            width:100%;
+            padding: 10px;
+        }
+        #time{
+            color: red;
+            padding: 0 5px;
+        }
+    </style>
+
+</head>
+<body>
+    <h3>模态框</h3>
+    <button class="btn btn-primary btn-lg">
+        点击出现模态框
+    </button>
+    <div class="modal fade" id="Amodal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">Modal标题</h4>
+                </div>
+                <div class="modal-body">
+                    <span id="time"></span>秒后自动关闭！
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    
+    <script>
+            $(function(){
+                var $Amodal = $('#Amodal');
+                var $time = $('#time');
+                
+                $('.btn-lg').on('click',function(){
+                    $Amodal.modal();
+                    var t = 5;
+                    $time.text(t);
+                    // setTimeout(function(){
+                    //     $time.text('2')
+                    // },1000);
+                    // setTimeout(function(){
+                    //     $time.text('1')
+                    // },2000);
+                    // setTimeout(function(){
+                    //     $Amodal.modal('hide')
+                    // },3000);
+                    var int = setInterval(function(){
+                        t=t-1;
+                        $time.text(t);
+                        if(t==0){
+                            $Amodal.modal('hide');
+                            clearInterval(int);
+                        }
+                    },1000);
+                    $Amodal.off('hide.bs.modal').on('hide.bs.modal',function(){
+                        clearInterval(int);
+                    });
+                });
+                
+            })
+        </script>
+</body>
+</html>
