@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/trymodal.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1>尝试一下</h1>
+        </div>
+    </header>
+    <div class="main-container">
+        <div class="sub-container1">
+            <div class="box">
+                <div class="first-head">
+                    <span>源代码</span>
+                    <button id="test_iframe">点击运行</button>
+                </div>
+                <div class="first-body">
+                    <textarea class="code" id="code"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="sub-container2">
+            <div class="box">
+                <div class="first-head">
+                    <span>运行结果</span>
+                </div>
+                <div class="first-body">
+                    <div class="iframe-container"><iframe id="testIframe" name="testIframe" ></iframe></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://evecho.github.io/cd/js/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var $code = $('#code');
+            $.ajax({
+                url: "https://evecho.github.io/cd/study/modal.html",
+                type: 'get',
+                dataType: 'text',
+                success: function (data) {
+                    // console.log(data);
+                    $code.val(data)
+                }
+            })
+
+            $('#test_iframe').on('click', function () {
+                var code = $code.val();
+                testIframe.document.write(code);
+                testIframe.document.close();
+            })
+        })
+    </script>
+    </script>
+</body>
+
+</html>

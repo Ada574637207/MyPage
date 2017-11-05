@@ -177,10 +177,10 @@ i{
     width: 99px;
 }
 .web-js{
-    width: 18px;
+    width: 36px;
 }
 .web-bootstrap{
-    width: 27px;
+    width: 54px;
 }
 footer{
     background-color: #3c4252;
@@ -196,6 +196,9 @@ footer{
 .vx{
     display: inline-block;
     margin: 4px 20px;
+}
+.getpdf a{
+    color:#fff;
 }
 
 
