@@ -1,0 +1,57 @@
+body{
+    position: relative;
+}
+.sidebar{
+    width: 263px;
+    position: fixed;
+    top: 150px;
+    padding-left: 20px;
+}
+.nav{
+    padding-left: 0;
+    list-style: none;
+}
+.sidenav{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+nav a{
+    font-size: 13px;
+    font-weight: 500;
+    color: #767676;
+    text-decoration: none;
+}
+nav a:hover,a:active{
+    color: #563d7c;
+    text-decoration: none;
+}
+.nav>li>a{
+    padding: 4px 20px;
+}
+.studies .back-to-top{
+    padding: 4px 20px;
+    text-decoration: none;
+}
+.sidebar .nav>.active>a {
+    padding-left: 18px;
+    font-weight: 700;
+    color: #563d7c;
+    background-color: transparent;
+    border-left: 2px solid #563d7c;
+}
+
+
+iframe{
+    width: 100%;
+    height: 400px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
+
+
+@media only screen and (max-width:768px){
+
+}

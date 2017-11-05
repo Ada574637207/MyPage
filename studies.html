@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>程达的学习</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="http://statics.1024tools.com/libs/highlight.js/styles/atelier-dune.light.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/studies.css">
+
+</head>
+
+<body>
+
+    <div class="studies">
+        <header>
+            <div class="header-container">
+                <div class="header-logo">阿达的个站</div>
+                <div class="header-nav">
+                    <div class="header-menu">
+                        <div class="header-menu-line line-1"></div>
+                        <div class="header-menu-line line-2"></div>
+                        <div class="header-menu-line line-3"></div>
+                    </div>
+                    <div class="header-nav-list">
+                        <a href="https://evecho.github.io/cd/home"><span class="glyphicon glyphicon-star"></span> 首页</a>
+                        <a href="https://evecho.github.io/cd/resume"><span class="glyphicon glyphicon-user"></span> 简历</a>
+                        <a href="#"><span class="glyphicon glyphicon-book"></span> 作品</a>
+                        <a href="https://evecho.github.io/cd/hobbies"><span class="glyphicon glyphicon-heart"></span> 爱好</a>
+                        <a class="active" href="https://evecho.github.io/cd/studies"><span class="glyphicon glyphicon-pencil"></span> 学习</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container" >
+            <div class="row">
+                <div class="col-xs-9">
+                    <div id="modal">
+                        <h1>模态框</h1>
+                        <h3>html：</h3>
+                        <div class="code-scroll">
+                            <div class="mycode-html">
+<pre class='hljs'><code>&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"modal fade"</span> <span class="hljs-property">id</span>=<span class="hljs-string">"Amodal"</span> tabindex=<span class="hljs-string">"-1"</span>&gt;
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"modal-dialog"</span>&gt;
+        &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"modal-content"</span>&gt;
+            &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"modal-header"</span>&gt;
+                &lt;button <span class="hljs-type">class</span>=<span class="hljs-string">"close"</span> data-dismiss=<span class="hljs-string">"modal"</span>&gt;×&lt;/button&gt;
+                &lt;h4 <span class="hljs-type">class</span>=<span class="hljs-string">"modal-title"</span>&gt;Modal标题&lt;/h4&gt;
+            &lt;/<span class="hljs-keyword">div</span>&gt;
+            &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"modal-body"</span>&gt;
+                &lt;span <span class="hljs-property">id</span>=<span class="hljs-string">"time"</span>&gt;&lt;/span&gt;秒后自动关闭！
+            &lt;/<span class="hljs-keyword">div</span>&gt;
+            &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">"modal-footer"</span>&gt;
+                &lt;button <span class="hljs-type">class</span>=<span class="hljs-string">"btn btn-default"</span> data-dismiss=<span class="hljs-string">"modal"</span>&gt;关闭&lt;/button&gt;
+            &lt;/<span class="hljs-keyword">div</span>&gt;
+        &lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;</code></pre>
+                            </div>
+                        </div>
+                        <h3>js:</h3>
+                        <div class="code-scroll">
+                            <div class="mycode-js">
+<pre class='hljs'><code>$(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">var</span> <span class="hljs-variable">$Amodal</span> = $(<span class="hljs-string">'#Amodal'</span>);
+    <span class="hljs-keyword">var</span> <span class="hljs-variable">$time</span> = $(<span class="hljs-string">'#time'</span>);
+    
+    $(<span class="hljs-string">'.btn-lg'</span>).on(<span class="hljs-string">'click'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-variable">$Amodal</span>.modal();
+        <span class="hljs-keyword">var</span> t = <span class="hljs-number">5</span>;
+        <span class="hljs-variable">$time</span>.text(t);
+        <span class="hljs-comment">// setTimeout(function(){</span>
+        <span class="hljs-comment">//     $time.text('2')</span>
+        <span class="hljs-comment">// },1000);</span>
+        <span class="hljs-comment">// setTimeout(function(){</span>
+        <span class="hljs-comment">//     $time.text('1')</span>
+        <span class="hljs-comment">// },2000);</span>
+        <span class="hljs-comment">// setTimeout(function(){</span>
+        <span class="hljs-comment">//     $Amodal.modal('hide')</span>
+        <span class="hljs-comment">// },3000);</span>
+        <span class="hljs-keyword">var</span> int = setInterval(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+            t=t-<span class="hljs-number">1</span>;
+            <span class="hljs-variable">$time</span>.text(t);
+            <span class="hljs-keyword">if</span>(t==<span class="hljs-number">0</span>){
+                <span class="hljs-variable">$Amodal</span>.modal(<span class="hljs-string">'hide'</span>);
+                clearInterval(int);
+            }
+        },<span class="hljs-number">1000</span>);
+        <span class="hljs-variable">$Amodal</span>.off(<span class="hljs-string">'hide.bs.modal'</span>).on(<span class="hljs-string">'hide.bs.modal'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+            clearInterval(int);
+        });
+    });
+})</code></pre>
+                            </div>
+                        </div>
+                        <h3>实例</h3>
+                        <div class="mydemo">
+                            <iframe src="study/modal.html"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <nav class="sidebar hideden-print hidden-xs hidden-sm" id="navbar">
+                        <ul class="nav sidenav">
+                            <li class="active"><a href="#modal">模态框</a></li>
+                            <li><a href="#scrollspy">滚动监听</a></li>
+                            <li><a href="#pagination">分页</a></li>
+                            <li><a href="#breacrumb">路径导航</a></li>
+                            <li><a href="#input">输入框组</a></li>
+                            <li><a href="#dropdown">下拉菜单</a></li>
+                            <li><a href="#glyphicon">glyphicon字体图标</a></li>
+                        </ul>
+                        <a class="back-to-top" href="#">返回顶部</a>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/header.js"></script>
+    <script>
+        $(function(){
+            $('body').scrollspy({
+                target:'#navbar',
+                offset:"150"
+            });
+        });
+    </script>
+</body>
+
+</html>
