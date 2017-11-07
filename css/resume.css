@@ -78,7 +78,7 @@ h1 {
 .pra-edu{
     display: inline-block;
     width: 60%;
-    vertical-align: middle;
+    vertical-align: bottom;
 }
 .color-333{
     color: #333;
@@ -135,9 +135,9 @@ i{
 }
 .skills{
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: bottom;
     width: 39%;
-    padding: 15%;
+    padding: 0 15%;
 }
 .skills p{
     margin: 0 5px;
